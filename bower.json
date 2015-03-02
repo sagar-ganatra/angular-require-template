@@ -1,0 +1,23 @@
+{
+  "name": "angular-require-template",
+  "version": "0.0.0",
+  "authors": [
+    "Sagar Ganatra"
+  ],
+  "description": "A template that defines how angular and require should be used to generate an angular application",
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.13",
+    "requirejs": "~2.1.16",
+    "jquery": "~2.1.3"
+  }
+}
