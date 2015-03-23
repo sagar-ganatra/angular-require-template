@@ -1,0 +1,24 @@
+<div flex-container="column" style="height:100%;">
+     
+    <div class="navbar-container"
+         flex-item="1">
+        <navbar title="Players"></navbar>
+    </div>
+    <div class="players-container"
+         flex-item="11"
+         flex-container="row"
+         style="height:100%;">
+        
+        <div flex-item-order="1" 
+             flex-item="3"
+             players-list
+             on-player-select="showPlayerStats(playerId)"
+             style="height:100%;">
+        </div>
+        <div flex-item-order="2" 
+             flex-item="9"
+             ui-view>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="player-list-container">
+    <ul flex-container="column"
+        flex-align=""
+        style="height: 100%; overflow: auto;">
+        <li ng-repeat="player in players"
+            flex-container="row"
+            ng-click="onPlayerSelect({playerId: player.id})">
+            
+            <span flex-item-order="1" 
+                 flex-item="6">
+                <img ng-src={{player.img}} />
+            </span>
+
+            <span class="p+"
+                  flex-item-order="2" 
+                  flex-item="6">
+                {{player.name}}
+            </span>
+
+        </li>
+    </ul>
+</div>

@@ -1,7 +1,65 @@
-@import 'bower_components/normalize-scss/_normalize.scss';
+@import 'vendor/normalize-scss/_normalize.scss';
+@import 'vendor/lumx/_colors.scss';
+@import 'vendor/lumx/_lumx.scss';
 
-$blue: #000;
+html, body {
+    width: 100%;
+    height: 100%;
+}
 
 body {
-  background: $blue;
+    background: $blue-300;   
+}
+
+
+.container {
+    height: 100%;   
+}
+
+
+.login-page {
+    .login-container, .register-page {
+        display: inline-block;
+        margin: 100px;
+    }
+}
+
+.navbar-container {
+    @extend .bgc-blue-500;
+}
+
+.login-container {
+    width: 400px;
+    height: 300px;
+    background: $white;
+    
+    form[name="loginForm"] {
+        padding: 10px 40px;   
+    }
+    input {
+        width: 250px;   
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+.player-list-container {
+    background: $white;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    li {
+        min-height: 110px;   
+    }
+    img {
+        width: 100px;
+        padding-left: 20px;
+    }
+}
+
+
+.error-message {
+    color: $red-A400;
 }
