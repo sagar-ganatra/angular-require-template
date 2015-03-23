@@ -5,9 +5,9 @@ define(function() {
         return {
             restrict: 'AE',
             templateUrl: './components/playerStats/partials/playersList.html',
-            controller: 'playersListController',
             scope: {
-                onPlayerSelect: '&'
+                onPlayerSelect: '&',
+                players: '='
             }
         };
     };

@@ -5,9 +5,8 @@ define(function() {
         return {
             restrict: 'AE',
             templateUrl: './components/playerStats/partials/playersDetail.html',
-            controller: 'playersDetailController',
             scope: {
-                playerId: '@'
+                playerData: '='
             }
         };
     };

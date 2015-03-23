@@ -48,12 +48,22 @@ define([
             .state('home', {
                 url: '/home',
                 templateUrl: 'pages/home/partials/players.html',
-                controller: 'pages.playersController'
+                controller: 'pages.playersController',
+                resolve: {
+                    players: function (Players) {
+                        return Players.get();
+                    }
+                }
             })
             .state('home.playerDetails', {
                 url: '/playerDetails/:playerId',
                 templateUrl: 'pages/home/partials/playerStats.html',
-                controller: 'pages.playerStatsController'
+                controller: 'pages.playerStatsController',
+                resolve: {
+                    playerDetails: function (Players, $stateParams) {
+                        return Players.get($stateParams.playerId);
+                    }
+                }
             });
     });
     
