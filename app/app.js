@@ -73,6 +73,13 @@ define([
         }
     });
     
+    app.run(function ($rootScope) {
+        $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+            console.log(arguments);
+            $rootScope.$broadcast(toState.name, toParams);
+        });
+    });
+    
     return app;
     
 });

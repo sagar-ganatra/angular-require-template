@@ -4,7 +4,10 @@ define(function () {
     return function () {
         return {
             restrict: 'AE',
-            templateUrl: './components/navbar/partials/navbarTemplate.html'
+            templateUrl: './components/navbar/partials/navbarTemplate.html',
+            scope: {
+                title: '@'
+            }
         };
     };
 });

@@ -51,10 +51,20 @@ body {
     overflow-x: hidden;
     
     li {
-        min-height: 110px;   
+        min-height: 110px;
+        padding: 10px 0;
+        
+        &:nth-child(even) {
+            background-color: $blue-300;
+        }
+        
+        &:nth-child(odd) {
+            background-color: $blue-200;
+        }
     }
+    
     img {
-        width: 100px;
+        width: 90px;
         padding-left: 20px;
     }
 }
