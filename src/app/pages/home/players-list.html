@@ -1,0 +1,28 @@
+<div flex-container="column" style="height:100%;">
+     
+    <div class="navbar-container"
+         flex-item="1">
+        <navbar title="INDIAN CRICKET TEAM"></navbar>
+    </div>
+    
+    <div class="players-container"
+         flex-item="11"
+         flex-container="row"
+         style="height:100%">
+        
+        <players-list flex-item-order="1" 
+                      flex-item="3"
+                      players="players"
+                      on-player-select="showPlayerStats(playerId)"
+                      selected-player="selectedPlayerId"
+                      style="height:100%;">
+            
+        </players-list>
+        <div class="bgc-blue-700"
+             flex-item-order="2" 
+             flex-item="9"
+             ui-view>
+        </div>
+
+    </div>
+</div>

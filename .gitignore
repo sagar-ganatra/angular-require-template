@@ -9,3 +9,8 @@
 /dist/
 /src/.sass-cache/
 /src/node_modules/
+/src/dist/
+/src/bower_components/
+/src/css/
+/src/temp/
+/src/vendor/

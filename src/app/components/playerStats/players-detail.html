@@ -1,0 +1,151 @@
+<div class="m++ player-details"
+     flex-container="row">
+
+    <span flex-item="3">
+        <img ng-src="{{playerData.img}}"/>
+    </span>
+         
+    <span class="fs-display-3 display-block" 
+          flex-item="9">
+        {{playerData.name}}
+    </span>
+        
+</div>
+
+<div class="card m++">
+    <lx-tabs links-tc="light"
+             links-bgc="light-blue-500"
+             indicator="yellow-500"
+             no-divider="true" 
+             z-depth="1">
+        
+        <lx-tab heading="BATTING">
+            <div class="data-table-container">
+                <table class="data-table data-table--has-primary data-table--has-secondary">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Matches</th>
+                            <th>Innings</th>
+                            <th>Runs</th>
+                            <th>Highest Score</th>
+                            <th>Average</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="5" class="divider divider--dark"></td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="data-table__clickable-row">
+                            <td>
+                                TESTS
+                            </td>
+                            <td>
+                                {{playerData.batting.tests.matches}}
+                            </td>
+                            <td>
+                                {{playerData.batting.tests.innings}}
+                            </td>
+                            <td>
+                                {{playerData.batting.tests.runs}}
+                            </td>
+                            <td>
+                                {{playerData.batting.tests.highestScore}}
+                            </td>
+                            <td>
+                                {{playerData.batting.tests.average}}
+                            </td>
+                        </tr>
+                        <tr class="data-table__clickable-row">
+                            <td>
+                                ODIs
+                            </td>
+                            <td>
+                                {{playerData.batting.odis.matches}}
+                            </td>
+                            <td>
+                                {{playerData.batting.odis.innings}}
+                            </td>
+                            <td>
+                                {{playerData.batting.odis.runs}}
+                            </td>
+                            <td>
+                                {{playerData.batting.odis.highestScore}}
+                            </td>
+                            <td>
+                                {{playerData.batting.odis.average}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </lx-tab>
+
+        <lx-tab heading="BOWLING">
+            <div class="data-table-container">
+                <table class="data-table data-table--has-primary data-table--has-secondary">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Matches</th>
+                            <th>Innings</th>
+                            <th>Wickets</th>
+                            <th>Best</th>
+                            <th>Econ</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td colspan="5" class="divider divider--dark"></td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="data-table__clickable-row">
+                            <td>
+                                TESTS
+                            </td>
+                            <td>
+                                {{playerData.bowling.tests.matches}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.tests.innings}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.tests.wickets}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.tests.best}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.tests.econ}}
+                            </td>
+                        </tr>
+                        <tr class="data-table__clickable-row">
+                            <td>
+                                ODIs
+                            </td>
+                            <td>
+                                {{playerData.bowling.odis.matches}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.odis.innings}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.odis.wickets}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.odis.best}}
+                            </td>
+                            <td>
+                                {{playerData.bowling.odis.econ}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </lx-tab>
+        
+    </lx-tabs>
+</div>

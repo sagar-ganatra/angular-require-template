@@ -1,0 +1,15 @@
+.login-component {
+    width: 400px;
+    height: 300px;
+    @extend .bgc-white;
+    
+    form[name="loginForm"] {
+        padding: 10px 40px;   
+    }
+    input {
+        width: 250px;   
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}

@@ -1,0 +1,27 @@
+<div class="player-list-component">
+    <ul flex-container="column"
+        style="height: 100%; overflow: auto;">
+        
+        <li ng-repeat="player in players"
+            flex-container="row"
+            ng-class="{'bgc-blue-700': player.id == selectedPlayer}"
+            ng-click="onPlayerSelect({playerId: player.id})">
+            
+            <div flex-item-order="1" 
+                 flex-item="6">
+                
+                    <img ng-src={{player.img}} />
+                
+            </div>
+
+            <div class="p+"
+                  flex-item-order="2" 
+                  flex-item="6">
+                
+                    {{player.name}}
+                
+            </div>
+
+        </li>
+    </ul>
+</div>

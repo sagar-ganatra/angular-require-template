@@ -1,0 +1,24 @@
+.player-list-component {
+    @extend .bgc-white;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    li {
+        min-height: 110px;
+        padding: 10px 0;
+        
+        &:nth-child(even) {
+             @extend .bgc-blue-300;
+        }
+        
+        &:nth-child(odd) {
+             @extend .bgc-blue-200;
+        }
+    }
+    
+    img {
+        width: 90px;
+        padding-left: 20px;
+    }
+}

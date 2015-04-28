@@ -1,0 +1,48 @@
+<div class="login-component"
+     flex-container="column"
+     flex-align="space-between center">
+    
+    <form name="loginForm">
+
+        <div flex-item>
+            <lx-text-field required
+                           label="Username"
+                           valid="userName.length > 0"
+                           error="userName.length == 0 && !loginForm.userName.$pristine">
+                <input type="text"
+                       name="userName"
+                       ng-model="userName"/>
+            </lx-text-field>
+            
+        </div>
+        
+        <div flex-item>
+            <lx-text-field required
+                           label="Password"
+                           valid="password.length > 0"
+                           error="password.length == 0 && !loginForm.password.$pristine">
+                <input type="password"
+                       name="password"
+                       ng-model="password" />
+            </lx-text-field>
+            
+        </div>
+
+        <div flex-item>
+            <button class="mt++ btn btn--l btn--blue btn--raised btn-submit" 
+                    lx-ripple
+                    ng-click="onLogin(userName, password)"
+                    ng-disabled="loginForm.$invalid">
+                Submit
+            </button>
+        </div>
+    
+        <!-- <div class="text-center" flex-item>
+            <a class="mt++ btn btn--l btn--blue btn--flat"
+               lx-ripple
+               ui-sref="{{registerState}}">
+                Register
+            </a>
+        </div> -->
+    </form>
+</div>
