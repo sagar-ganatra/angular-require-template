@@ -12,6 +12,10 @@ define(function () {
             
         };
         
+        $scope.onSignOut = function () {
+            $state.transitionTo('login');  
+        };
+        
         $scope.$on('home.playerDetails', function (state, stateParams) {
             
             $timeout(function () {

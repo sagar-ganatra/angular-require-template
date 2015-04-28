@@ -6,7 +6,8 @@ define(function () {
             restrict: 'AE',
             templateUrl: './components/navbar/navbar.html',
             scope: {
-                title: '@'
+                title: '@',
+                onSignOut: '&'
             }
         };
     };
