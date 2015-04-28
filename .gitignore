@@ -7,3 +7,5 @@
 /.sass-cache/
 /css/
 /dist/
+/src/.sass-cache/
+/src/node_modules/
