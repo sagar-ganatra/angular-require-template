@@ -4,25 +4,18 @@ var gulp = require('gulp'),
     minifycss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
     rev = require('gulp-rev'),
     htmlreplace = require('gulp-html-replace'),
     del = require('del'),
     serve = require('gulp-serve'),
-    livereload = require('gulp-livereload'),
-    amdOptimize = require('gulp-amd-optimizer'),
     ngAnnotate = require('gulp-ng-annotate'),
     rjs = require('requirejs'),
     wait = require('gulp-wait'),
-    expect = require('gulp-expect-file'),
     q = require('q'),
     fs = require('fs'),
     templateCache = require('gulp-angular-templatecache'),
     runSequence = require('run-sequence'),
     minifyHTML = require('gulp-minify-html');
-
-
 
 gulp.task('clean', function () {
     return del(['dist']);
@@ -86,7 +79,6 @@ gulp.task('compressjs', function() {
     setTimeout(function () {
         if(fs.existsSync(cwd + '/dist/js/main-bundle.js')) {
             gulp.src(cwd + '/dist/js/main-bundle.js')//, cwd + '/dist/js/templates.js'])
-                //.pipe(concat('main-bundle.js'))
                 .pipe(gulp.dest('dist/js'));
             deferred.resolve();
         } else {
@@ -118,7 +110,6 @@ gulp.task('rev', function () {
 
 gulp.task('htmlreplace', function () {
     var manifest = require('./dist/rev-manifest.json');
-    console.log(manifest);
     
     return gulp.src('app/index.html')
     .pipe(htmlreplace({
@@ -138,8 +129,7 @@ gulp.task('jshint', function(done) {
 });
 
 gulp.task('watch', function() {
-    livereload.listen();
-    gulp.watch('styles/*.scss', ['styles']);
+    gulp.watch(['styles/*.scss', 'app/**/*.scss'], ['styles']);
 });
 
 gulp.task('default', function() {
