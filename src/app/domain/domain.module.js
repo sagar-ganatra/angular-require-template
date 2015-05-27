@@ -1,13 +1,13 @@
 define([
     'angular',
     'domain/Players',
-    'domain/User'
-],  function(ng, Players, User) {
-        'use strict';
+    'domain/User',
+    'services/common-services.module'
+],  function (ng, Players, User) {
+    'use strict';
         
-        return ng.module('domainModule', [])
-                 .service('Players', Players)
-                 .service('User', User);
+    return ng.module('domainModule', ['commonServices'])
+             .service('Players', Players)
+             .service('User', User);
                  
-    }
-);
+});
