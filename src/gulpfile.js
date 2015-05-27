@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     rev = require('gulp-rev'),
     htmlreplace = require('gulp-html-replace'),
+    preprocess = require('gulp-preprocess'),
     del = require('del'),
     serve = require('gulp-serve'),
     ngAnnotate = require('gulp-ng-annotate'),
@@ -15,7 +16,12 @@ var gulp = require('gulp'),
     fs = require('fs'),
     templateCache = require('gulp-angular-templatecache'),
     runSequence = require('run-sequence'),
-    minifyHTML = require('gulp-minify-html');
+    minifyHTML = require('gulp-minify-html'),
+    minimist = require('minimist');
+
+var context = {
+    isMock: minimist(process.argv.slice(2)).isMock /* when running build, this is set to false. By passing --isMock true a mock build is generated */
+};
 
 gulp.task('clean', function () {
     return del(['dist']);
@@ -121,6 +127,14 @@ gulp.task('htmlreplace', function () {
     
 });
 
+gulp.task('preprocessjs', function () {
+
+    return gulp.src('app/app.js')
+           .pipe(preprocess({context: { MOCK: context.isMock} }))
+           .pipe(gulp.dest('./dist'));
+
+});
+
 gulp.task('jshint', function(done) {
     return gulp.src('app/**/*.js')
            .pipe(jshint())
@@ -134,7 +148,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', function() {
     runSequence('clean', 'jshint', 
-                'compresscss', 'ngAnnotate', 'minifyHTML', 'compressjs', 'rev', 'htmlreplace');
+                'compresscss', 'ngAnnotate', 'minifyHTML', 'compressjs', 'rev', 'htmlreplace', 'preprocessjs');
 });
 
 gulp.task('serve', serve({

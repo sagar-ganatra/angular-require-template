@@ -1,8 +1,10 @@
 define([
     'angular',
     /*mock module*/
+    // @ifdef MOCK
     'mockModule',
     'mockServices',
+    // @endif
     /* user defined modules */
     'components/auth/auth.module',
     'components/login/login.module',
@@ -16,7 +18,7 @@ define([
     'angularCookies',
     'angularMessages',
     'uirouter',
-    'lumx',
+    'lumx'
 ], function (ng) {
     'use strict';
     
@@ -25,7 +27,9 @@ define([
         'ui.router',
         //'templates',
         'lumx',
+        // @ifdef MOCK
         'mockModule',
+        // @endif
         'authModule',
         'loginModule',
         'navbarModule',
@@ -71,7 +75,7 @@ define([
     });
     
     app.run(function ($state, authService) {
-        if(!authService.isAuthenticated()) {
+        if (!authService.isAuthenticated()) {
             $state.transitionTo('login');
         }
     });
