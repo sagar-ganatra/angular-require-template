@@ -32,6 +32,6 @@
         "d3": false,
         "dagreD3":false,
         "require": false,
-        "define": false
+        "define": true
     }
 }
