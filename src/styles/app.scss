@@ -1,12 +1,11 @@
-@import 'vendor/normalize-scss/_normalize.scss';
-@import 'vendor/lumx/_colors.scss';
-@import 'vendor/lumx/_lumx.scss';
+@import '../vendor/normalize-scss/_normalize.scss';
+@import '../vendor/lumx/_colors.scss';
+@import '../vendor/lumx/_lumx.scss';
 
-@import 'app/components/login/login.scss';
-@import 'app/components/navbar/navbar.scss';
-@import 'app/components/playerStats/players-list.scss';
-
-@import 'app/pages/login/login-page.scss';
+@import '../app/components/login/login.scss';
+@import '../app/components/navbar/navbar.scss';
+@import '../app/components/playerStats/players-list.scss';
+@import '../app/pages/login/login-page.scss';
 
 html, body {
     width: 100%;
