@@ -5,5 +5,5 @@ define([
     'use strict';
 
     return ng.module('commonServices', [])
-                 .constant('BACKEND_URLS', backendUrlServiceProvider);
+             .constant('BACKEND_URLS', backendUrlServiceProvider);
 });
