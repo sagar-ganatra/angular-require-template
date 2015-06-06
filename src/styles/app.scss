@@ -1,6 +1,6 @@
-@import '../vendor/normalize-scss/_normalize.scss';
-@import '../vendor/lumx/_colors.scss';
-@import '../vendor/lumx/_lumx.scss';
+@import '../bower_components/normalize-scss/_normalize.scss';
+@import '../bower_components/lumx/_colors.scss';
+@import '../bower_components/lumx/lumx.css';
 
 @import '../app/components/login/login.scss';
 @import '../app/components/navbar/navbar.scss';
@@ -13,7 +13,7 @@ html, body {
 }
 
 body {
-    @extend .bgc-blue-300;
+    background: $blue-300;
     
     .container {
         height: 100%;   

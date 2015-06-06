@@ -26,24 +26,33 @@
     "angular-messages": "~1.3.14"
   },
   "install": {
-    "path": "vendor",
+    "path": "bower_components",
     "sources": {
-      "lumx": {
+      "mdi": {
         "mapping": [
-          {
-            "bower_components/lumx/dist/scss/settings/_colors.scss": "_colors.scss"
-          },
-          {
-            "bower_components/lumx/dist/lumx.css": "_lumx.scss"
-          },
-          {
-            "bower_components/lumx/dist/lumx.js": "lumx.js"
-          }
+            {   
+                ".tmp/mdi/css/materialdesignicons.min.css":
+                "materialdesignicons.css"
+            },
+            {
+                ".tmp/mdi/fonts/materialdesignicons-webfont.ttf":                   "../fonts/materialdesignicons-webfont.ttf"
+            },
+            {
+                  ".tmp/mdi/fonts/materialdesignicons-webfont.woff":                   "../fonts/materialdesignicons-webfont.woff"
+            },
+            {
+                  ".tmp/mdi/fonts/materialdesignicons-webfont.woff2":                   "../fonts/materialdesignicons-webfont.woff2"
+            }
         ]
       },
+      "lumx": [
+          ".tmp/lumx/dist/lumx.js",
+          ".tmp/lumx/dist/lumx.css",
+          ".tmp/lumx/core/scss/settings/_colors.scss"
+      ],
       "velocity": [
-        "bower_components/velocity/velocity.min.js",
-        "bower_components/velocity/velocity.ui.min.js"
+        ".tmp/velocity/velocity.min.js",
+        ".tmp/velocity/velocity.ui.min.js"
       ]
     }
   },

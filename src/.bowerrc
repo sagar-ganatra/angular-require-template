@@ -1,0 +1,6 @@
+{
+  "directory": ".tmp",
+  "scripts": {
+      "postinstall": "bower-installer"
+  }
+}

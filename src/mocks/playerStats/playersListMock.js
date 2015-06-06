@@ -5,7 +5,7 @@ define([
     var players = [
         {
             name: 'Mahendra Singh Dhoni',
-            img: '../img/dhoni.png',
+            img: 'images/dhoni.png',
             id: 1,
             batting: {
                 tests: {
@@ -42,7 +42,7 @@ define([
         },
         {
             name: 'Virat Kohli',
-            img: '../img/virat.png',
+            img: 'images/virat.png',
             id: 2,
             batting: {
                 tests: {
@@ -79,7 +79,7 @@ define([
         },
         {
             name: 'Shikhar Dhawan',
-            img: '../img/shikhar.png',
+            img: 'images/shikhar.png',
             id: 3,
             batting: {
                 tests: {
@@ -116,7 +116,7 @@ define([
         },
         {
             name: 'Rohit Sharma',
-            img: '../img/rohit.png',
+            img: 'images/rohit.png',
             id: 4,
             batting: {
                 tests: {
@@ -153,7 +153,7 @@ define([
         },
         {
             name: 'Ajinkya Rahane',
-            img: '../img/rahane.png',
+            img: 'images/rahane.png',
             id: 5,
             batting: {
                 tests: {
@@ -190,7 +190,7 @@ define([
         },
         {
             name: 'Suresh Raina',
-            img: '../img/suresh.png',
+            img: 'images/suresh.png',
             id: 6,
             batting: {
                 tests: {

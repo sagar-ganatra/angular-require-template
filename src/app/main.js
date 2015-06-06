@@ -1,15 +1,15 @@
 require.config({
     paths: {
-        angular: '../vendor/angular/angular',
-        angularMocks: '../vendor/angular-mocks/angular-mocks',
-        angularMessages: '../vendor/angular-messages/angular-messages',
-        angularCookies: '../vendor/angular-cookies/angular-cookies',
-        jquery: '../vendor/jquery/jquery',
-        uirouter: '../vendor/angular-ui-router/angular-ui-router',
-        lumx: '../vendor/lumx/lumx',
-        moment: '../vendor/moment/moment',
-        velocity: '../vendor/velocity/velocity.min',
-        velocityui: '../vendor/velocity/velocity.ui.min',
+        angular: '../bower_components/angular/angular',
+        angularMocks: '../bower_components/angular-mocks/angular-mocks',
+        angularMessages: '../bower_components/angular-messages/angular-messages',
+        angularCookies: '../bower_components/angular-cookies/angular-cookies',
+        jquery: '../bower_components/jquery/jquery',
+        uirouter: '../bower_components/angular-ui-router/angular-ui-router',
+        lumx: '../bower_components/lumx/lumx',
+        moment: '../bower_components/moment/moment',
+        velocity: '../bower_components/velocity/velocity.min',
+        velocityui: '../bower_components/velocity/velocity.ui.min',
         mockModule: '../mocks/mockModule',
         mockServices: '../mocks/mockServices'
         

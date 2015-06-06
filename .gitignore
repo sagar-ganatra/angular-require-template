@@ -14,3 +14,7 @@
 /src/css/
 /src/temp/
 /src/vendor/
+/src/build/
+/src/.tmp/
+**/.DS_Store
+.DS_Store
